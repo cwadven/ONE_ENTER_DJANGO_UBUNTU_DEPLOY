@@ -43,5 +43,5 @@ StandardError=syslog
 WantedBy=multi-user.target
 EOF
 
-systemctl start uwsgi
-systemctl enable uwsgi
+sudo systemctl start uwsgi
+sudo systemctl enable uwsgi
