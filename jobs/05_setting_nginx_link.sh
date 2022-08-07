@@ -15,6 +15,8 @@ upstream django {
 }
 
 server {
+        listen 80;
+        
         client_max_body_size 100M;
         charset utf-8;
 
