@@ -19,7 +19,7 @@ export CONFIG_SETTINGS
 
 # script 를 단계별로 실행
 . "jobs/00_install_nginx.sh"
-. "jobs/01_set_directory_and_linux_user_git_clone.sh"
+. "jobs/01_set_directory_and_linux_user.sh"
 . "jobs/02_install_python.sh"
 . "jobs/03_install_pip_modules.sh"
 . "jobs/04_setting_uwsgi.sh"
