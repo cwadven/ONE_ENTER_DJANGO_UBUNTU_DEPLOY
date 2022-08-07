@@ -27,7 +27,7 @@ cd /etc/systemd/system/
 
 cat <<EOF | sudo tee uwsgi.service
 [Unit]
-Descripttion=uWSGI Emperor service
+Description=uWSGI Emperor service
 
 [Service]
 ExecStart=$MY_PROJECT_DIRECTORY/venv/bin/uwsgi --emperor $MY_PROJECT_DIRECTORY/run
@@ -46,3 +46,4 @@ EOF
 sudo systemctl stop uwsgi
 sudo systemctl start uwsgi
 sudo systemctl enable uwsgi
+sudo systemctl daemon-reload
