@@ -1,5 +1,7 @@
 # 원앤터 Django Ubuntu 배포
 
+#### Canonical-Ubuntu-18.04 Version (Oracle Cloud Instance)
+
 ---
 
 주의: root 권한으로 실행해주세요!!
