@@ -2,3 +2,6 @@
 
 ---
 
+```
+/bin/bash start.sh
+```
