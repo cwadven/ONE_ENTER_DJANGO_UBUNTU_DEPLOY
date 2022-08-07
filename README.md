@@ -2,6 +2,15 @@
 
 ---
 
+주의: root 권한으로 실행해주세요!!
+- pip install 에서 문제가 생겨서 root 권한 실행 
+
+```
+sudo su -
+```
+
+스크립트 실행
+
 ```
 /bin/bash start.sh
 ```
