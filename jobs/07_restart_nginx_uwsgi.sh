@@ -1,2 +1,2 @@
-systemctl restart nginx
-systemctl restart uwsgi
+sudo systemctl restart nginx
+sudo systemctl restart uwsgi
