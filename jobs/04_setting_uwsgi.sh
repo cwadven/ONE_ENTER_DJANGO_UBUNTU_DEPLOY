@@ -43,7 +43,7 @@ StandardError=syslog
 WantedBy=multi-user.target
 EOF
 
+sudo systemctl daemon-reload
 sudo systemctl stop uwsgi
 sudo systemctl start uwsgi
 sudo systemctl enable uwsgi
-sudo systemctl daemon-reload
