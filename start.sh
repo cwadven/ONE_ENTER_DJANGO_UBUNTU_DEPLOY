@@ -12,7 +12,7 @@ PROJECT_NAME=(${split_with_git[0]})
 
 MY_PROJECT_DIRECTORY=/var/www/${PROJECT_NAME}
 
-CURRENT_FOLDER=$pwd
+CURRENT_FOLDER=$PWD
 
 export GIT_URL
 export PROJECT_NAME
