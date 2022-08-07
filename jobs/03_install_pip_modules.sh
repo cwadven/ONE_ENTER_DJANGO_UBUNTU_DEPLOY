@@ -1,8 +1,6 @@
-cd /var/www/null_blog/
-sudo python3.7 -m venv venv
-source venv/bin/activate
+cd $MY_PROJECT_DIRECTORY && python3.7 -m venv venv
 
-pip install --upgrade pip setuptools
-pip install -r requirements.txt
-pip install wheel
-pip install uwsgi
+source $MY_PROJECT_DIRECTORY/venv/bin/activate && pip install --upgrade pip setuptools
+source $MY_PROJECT_DIRECTORY/venv/bin/activate && pip install -r requirements.txt
+source $MY_PROJECT_DIRECTORY/venv/bin/activate && pip install wheel
+source $MY_PROJECT_DIRECTORY/venv/bin/activate && pip install uwsgi
