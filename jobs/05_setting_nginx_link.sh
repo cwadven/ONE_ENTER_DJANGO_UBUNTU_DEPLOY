@@ -9,7 +9,7 @@ sudo sed -i 's/# server_names_hash_bucket_size 64;/server_names_hash_bucket_size
 
 cd /etc/nginx/sites-available/
 
-cat <<EOF | sudo tee -a $PROJECT_NAME
+cat <<EOF | sudo tee $PROJECT_NAME
 upstream django {
         server unix:$MY_PROJECT_DIRECTORY/run/uwsgi.sock;
 }
