@@ -1,17 +1,19 @@
-sudo mkdir run logs
+cd $MY_PROJECT_DIRECTORY && sudo mkdir run logs
 
 sudo chown django:www-data run
 sudo chown django:www-data logs
 
-sudo vi /var/www/null_blog/run/uwsgi.ini
+cd $MY_PROJECT_DIRECTORY/run
 
+# 출력값 없애는 방법 찾아보기
+cat <<EOF | sudo tee -a uwsgi.ini
 [uwsgi]
 uid = django
-base = /var/www/null_blog
+base = $MY_PROJECT_DIRECTORY
 home = %(base)/venv
 chdir = %(base)
 module = config.wsgi:application
-env = DJANGO_SETTINGS_MODULE=config.settings
+env = DJANGO_SETTINGS_MODULE=$CONFIG_SETTINGS
 master = true
 processes = 4
 socket = %(base)/run/uwsgi.sock
@@ -19,14 +21,16 @@ logto = %(base)/logs/uwsgi.log
 chown-socket = %(uid):www-data
 chmod-socket = 660
 vacuum = true
+EOF
 
-sudo vi /etc/systemd/system/uwsgi.service
+cd /etc/systemd/system/
 
+cat <<EOF | sudo tee -a uwsgi.service
 [Unit]
 Descripttion=uWSGI Emperor service
 
 [Service]
-ExecStart=/var/www/null_blog/venv/bin/uwsgi --emperor /var/www/null_blog/run
+ExecStart=$MY_PROJECT_DIRECTORY/venv/bin/uwsgi --emperor $MY_PROJECT_DIRECTORY/run
 User=django
 Group=www-data
 Restart=on-failure
@@ -37,6 +41,7 @@ StandardError=syslog
 
 [Install]
 WantedBy=multi-user.target
+EOF
 
 systemctl start uwsgi
 systemctl enable uwsgi
