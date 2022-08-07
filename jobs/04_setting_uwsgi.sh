@@ -6,7 +6,7 @@ sudo chown django:www-data logs
 cd $MY_PROJECT_DIRECTORY/run
 
 # 출력값 없애는 방법 찾아보기
-cat <<EOF | sudo tee -a uwsgi.ini
+cat <<EOF | sudo tee uwsgi.ini
 [uwsgi]
 uid = django
 base = $MY_PROJECT_DIRECTORY
@@ -25,7 +25,7 @@ EOF
 
 cd /etc/systemd/system/
 
-cat <<EOF | sudo tee -a uwsgi.service
+cat <<EOF | sudo tee uwsgi.service
 [Unit]
 Descripttion=uWSGI Emperor service
 
