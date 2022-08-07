@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 # git 프로젝트 url 을 가져옵니다.
 # 예) https://github.com/cwadven/NullyDRFTemplate.git
