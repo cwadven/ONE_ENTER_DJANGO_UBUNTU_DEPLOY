@@ -3,7 +3,7 @@
 read -p "Enter Git Project Url: " GIT_URL
 
 # 예) config.settings.production.py
-read -p "Enter settings.py direction with path .: " CONFIG_SETTINGS
+read -p "Enter settings.py direction with path . (example: config.settings.production.py): " CONFIG_SETTINGS
 
 # 예) blog
 read -p "Enter New Database Name: " DATABASE_NAME
