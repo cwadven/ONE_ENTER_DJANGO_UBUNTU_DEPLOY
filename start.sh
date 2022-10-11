@@ -62,6 +62,9 @@ echo "================start 08_set_databases_with_settings.sh=================="
 echo "================start 09_restart_nginx_uwsgi.sh=================="
 . "$CURRENT_FOLDER/jobs/09_restart_nginx_uwsgi.sh"
 
+echo "================start 10_migrate_django_database.sh=================="
+. "$CURRENT_FOLDER/jobs/10_migrate_django_database.sh"
+
 unset GIT_URL
 unset PROJECT_NAME
 unset MY_PROJECT_DIRECTORY
