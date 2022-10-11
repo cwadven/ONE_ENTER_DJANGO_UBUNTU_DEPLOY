@@ -5,6 +5,13 @@ read -p "Enter Git Project Url: " GIT_URL
 # 예) config.settings.production.py
 read -p "Enter settings.py direction with path .: " CONFIG_SETTINGS
 
+# 예) blog
+read -p "Enter New Database Name: " DATABASE_NAME
+# 예) blog
+read -p "Enter New Database User Name: " DATABASE_USER_NAME
+# 예) 비밀번호
+read -p "Enter New Database User Password: " DATABASE_USER_PASSWORD
+
 # 프로젝트 명을 가져옵니다.
 with_git=(${GIT_URL##*/})
 split_with_git=(${with_git//./ })
@@ -18,6 +25,9 @@ export GIT_URL
 export PROJECT_NAME
 export MY_PROJECT_DIRECTORY
 export CONFIG_SETTINGS
+export DATABASE_NAME
+export DATABASE_USER_NAME
+export DATABASE_USER_PASSWORD
 
 export CURRENT_FOLDER
 
@@ -43,11 +53,20 @@ echo "================start 05_setting_nginx_link.sh=================="
 echo "================start 06_setting_django_project.sh=================="
 . "$CURRENT_FOLDER/jobs/06_setting_django_project.sh"
 
-echo "================start 07_restart_nginx_uwsgi.sh=================="
-. "$CURRENT_FOLDER/jobs/07_restart_nginx_uwsgi.sh"
+echo "================start 07_install_mysql_and_module.sh=================="
+. "$CURRENT_FOLDER/jobs/07_install_mysql_and_module.sh"
+
+echo "================start 08_set_databases_with_settings.sh=================="
+. "$CURRENT_FOLDER/jobs/08_set_databases_with_settings.sh"
+
+echo "================start 09_restart_nginx_uwsgi.sh=================="
+. "$CURRENT_FOLDER/jobs/09_restart_nginx_uwsgi.sh"
 
 unset GIT_URL
 unset PROJECT_NAME
 unset MY_PROJECT_DIRECTORY
 unset CONFIG_SETTINGS
 unset CURRENT_FOLDER
+unset DATABASE_NAME
+unset DATABASE_USER_NAME
+unset DATABASE_USER_PASSWORD

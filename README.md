@@ -19,3 +19,6 @@ sudo su -
 
 
 중간에 pip install 에서 문제가 생기면 정상적으로 실행되지 않을 겁니다.
+
+
+database 연결 필요
