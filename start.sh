@@ -3,7 +3,7 @@
 read -p "Enter Git Project Url: " GIT_URL
 
 # 예) config.settings.production.py
-read -p "Enter settings.py direction with path . (example: config.settings.production.py): " CONFIG_SETTINGS
+read -p "Enter settings.py direction with path . (example: config.settings.production): " CONFIG_SETTINGS
 
 # 예) blog
 read -p "Enter New Database Name: " DATABASE_NAME
@@ -25,7 +25,7 @@ export GIT_URL
 export PROJECT_NAME
 export MY_PROJECT_DIRECTORY
 export CONFIG_SETTINGS
-export DJANGO_SETTINGS_MODULE=${CONFIG_SETTINGS::(-3)}
+export DJANGO_SETTINGS_MODULE=$CONFIG_SETTINGS
 export DATABASE_NAME
 export DATABASE_USER_NAME
 export DATABASE_USER_PASSWORD
