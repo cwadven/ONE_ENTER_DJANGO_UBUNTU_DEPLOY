@@ -1,3 +1,7 @@
+if [ -d "$MY_PROJECT_DIRECTORY/run" ];
+then
+echo "already exists"
+else
 cd $MY_PROJECT_DIRECTORY && sudo mkdir run logs
 
 sudo chown django:www-data run
@@ -47,3 +51,4 @@ sudo systemctl daemon-reload
 sudo systemctl stop uwsgi
 sudo systemctl start uwsgi
 sudo systemctl enable uwsgi
+fi

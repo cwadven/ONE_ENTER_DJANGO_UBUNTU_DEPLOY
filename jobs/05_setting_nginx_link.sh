@@ -1,3 +1,7 @@
+if [ -f "/etc/nginx/sites-available/$PROJECT_NAME" ];
+then
+echo "already exists"
+else
 sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/$PROJECT_NAME
 sudo ln -s /etc/nginx/sites-available/$PROJECT_NAME /etc/nginx/sites-enabled
 sudo rm /etc/nginx/sites-enabled/default
@@ -34,3 +38,4 @@ server {
         }
 }
 EOF
+fi
