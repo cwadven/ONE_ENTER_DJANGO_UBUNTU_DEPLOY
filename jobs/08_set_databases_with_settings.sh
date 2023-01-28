@@ -7,9 +7,9 @@ echo "database already exists"
 else
 # .sql 파일 생성
 cat <<EOF | sudo tee mysql_database_initial_setting.sql
-CREATE DATABASE $DATABASE_NAME;
+CREATE DATABASE '$DATABASE_NAME';
 CREATE USER `$DATABASE_USER_NAME`@`localhost` IDENTIFIED BY '$DATABASE_USER_PASSWORD';
-GRANT ALL PRIVILEGES ON $DATABASE_NAME.* TO `$DATABASE_USER_NAME`@`localhost`;
+GRANT ALL PRIVILEGES ON '$DATABASE_NAME'.* TO `$DATABASE_USER_NAME`@`localhost`;
 flush privileges; # 권한 적용
 ALTER DATABASE `$DATABASE_NAME` CHARACTER SET utf8;
 EOF
