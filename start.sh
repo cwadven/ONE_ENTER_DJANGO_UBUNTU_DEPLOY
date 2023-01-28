@@ -7,10 +7,13 @@ read -p "Enter settings.py direction with path . (example: config.settings.produ
 
 # 예) blog
 read -p "Enter New Database Name: " DATABASE_NAME
+# 예) test_blog
+read -p "Enter New Test Database Name: " TEST_DATABASE_NAME
 # 예) blog
 read -p "Enter New Database User Name: " DATABASE_USER_NAME
 # 예) 비밀번호
 read -p "Enter New Database User Password: " DATABASE_USER_PASSWORD
+
 
 # 프로젝트 명을 가져옵니다.
 with_git=(${GIT_URL##*/})
@@ -73,5 +76,6 @@ unset CONFIG_SETTINGS
 unset DJANGO_SETTINGS_MODULE
 unset CURRENT_FOLDER
 unset DATABASE_NAME
+unset TEST_DATABASE_NAME
 unset DATABASE_USER_NAME
 unset DATABASE_USER_PASSWORD
