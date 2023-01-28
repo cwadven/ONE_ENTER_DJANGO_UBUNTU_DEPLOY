@@ -60,7 +60,7 @@ echo "================start 07_install_mysql_and_module.sh=================="
 echo "================start 08_set_databases_with_settings.sh=================="
 . "$CURRENT_FOLDER/jobs/08_set_databases_with_settings.sh"
 
-echo "================start 09_migrate_django_database.sh.sh=================="
+echo "================start 09_migrate_django_database.sh=================="
 . "$CURRENT_FOLDER/jobs/09_migrate_django_database.sh"
 
 echo "================start 10_restart_nginx_uwsgi.sh=================="
