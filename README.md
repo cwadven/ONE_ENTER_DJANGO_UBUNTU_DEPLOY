@@ -24,7 +24,7 @@ cd ONE_ENTER_DJANGO_UBUNTU_DEPLOY
 ```
 
 
-#### 3. 
+#### 3. 스크립트 실행 시, 나오는 내용 
 
 ```
 Enter Git Project Url: https://github.com/cwadven/StoryBuilder.git
