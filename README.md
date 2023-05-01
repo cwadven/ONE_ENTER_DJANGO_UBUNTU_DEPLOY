@@ -11,6 +11,10 @@
 
 ```
 sudo su -
+
+git clone https://github.com/cwadven/ONE_ENTER_DJANGO_UBUNTU_DEPLOY.git
+
+cd ONE_ENTER_DJANGO_UBUNTU_DEPLOY
 ```
 
 #### 2. 스크립트 실행
