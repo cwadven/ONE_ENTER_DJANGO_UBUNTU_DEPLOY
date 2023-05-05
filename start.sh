@@ -5,6 +5,9 @@ read -p "Enter Git Project Url: " GIT_URL
 # 예) config.settings.production.py
 read -p "Enter settings.py direction with path . (example: config.settings.production): " CONFIG_SETTINGS
 
+# 예) 컴퓨터 User 계정 이름
+read -p "Enter Ubuntu Server User Name: " SERVER_USER_NAME
+
 # 예) blog
 read -p "Enter New Database Name: " DATABASE_NAME
 # 예) test_blog
@@ -33,6 +36,7 @@ export DATABASE_NAME
 export TEST_DATABASE_NAME
 export DATABASE_USER_NAME
 export DATABASE_USER_PASSWORD
+export SERVER_USER_NAME
 
 export CURRENT_FOLDER
 
@@ -80,3 +84,4 @@ unset DATABASE_NAME
 unset TEST_DATABASE_NAME
 unset DATABASE_USER_NAME
 unset DATABASE_USER_PASSWORD
+unset SERVER_USER_NAME
